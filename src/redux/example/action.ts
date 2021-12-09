@@ -19,6 +19,22 @@ export const removeExample = (article: IExample) => {
   return simulateHttpRequest(action);
 }
 
+export const exampleCreateApi = () => {
+  return async (dispatch: ExampleDispatchType) => {
+    dispatch({
+      type: actionTypes.SET_LOADING,
+      loading: true
+    });
+
+    setTimeout(() => {
+      return dispatch({
+        type: actionTypes.SET_LOADING,
+        loading: false
+      });
+    }, 1500)
+  };
+}
+
 export const incCounter = () => ({
   type: actionTypes.INC_COUNTER
 });
