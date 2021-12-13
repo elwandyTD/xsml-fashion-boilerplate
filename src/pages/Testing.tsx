@@ -26,7 +26,7 @@ const Testing = () => {
   }, [dispatch]);
 
   React.useEffect(() => {
-    dispatch(exampleCreateApi());
+    dispatch(exampleCreateApi(true));
   }, [dispatch]);
 
   return (

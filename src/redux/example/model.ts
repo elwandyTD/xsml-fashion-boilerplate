@@ -8,13 +8,18 @@ export type ExampleState = {
   articles: IExample[];
   counter: number | 0;
   loading: boolean | undefined;
+  isSuccess: boolean | undefined;
+}
+
+export type ExamplePayload = {
+  article?: IExample;
+  loading?: boolean;
+  state?: object | ExampleState;
 }
 
 export type ExampleAction = {
   type: string;
-  article?: IExample;
-  state?: object;
-  loading?: boolean;
+  payload: ExamplePayload
 }
 
 export type ExampleDispatchType = (args: ExampleAction) => ExampleAction

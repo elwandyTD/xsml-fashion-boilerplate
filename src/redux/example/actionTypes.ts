@@ -1,8 +1,22 @@
-export const ADD_EXAMPLE = "ADD_EXAMPLE";
-export const REMOVE_EXAMPLE = "REMOVE_EXAMPLE";
+// export const ADD_EXAMPLE = "EXAMPLE/ADD";
+// export const REMOVE_EXAMPLE = "EXAMPLE/REMOVE";
 
-export const INC_COUNTER = "INC_COUNTER";
-export const DEC_COUNTER = "DEC_COUNTER";
+// export const INC_COUNTER = "EXAMPLE/INC_COUNTER";
+// export const DEC_COUNTER = "EXAMPLE/DEC_COUNTER";
 
-export const SET_STATE = "SET_STATE";
-export const SET_LOADING = "SET_LOADING";
+// export const SET_STATE = "SET_STATE";
+// export const SET_LOADING = "SET_LOADING";
+
+enum actionTypes {
+  ADD_EXAMPLE = "EXAMPLE/ADD",
+  REMOVE_EXAMPLE = "EXAMPLE/REMOVE",
+
+  INC_COUNTER = "EXAMPLE/INC_COUNTER",
+  DEC_COUNTER = "EXAMPLE/DEC_COUNTER",
+
+  SET_STATE = "SET_STATE",
+  SET_LOADING = "SET_LOADING"
+}
+
+
+export default actionTypes;

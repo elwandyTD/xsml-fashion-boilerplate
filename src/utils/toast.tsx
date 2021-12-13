@@ -8,7 +8,8 @@ const defaultSetting: UseToastOptions = {
   duration: 1500,
   isClosable: true,
   status: "success",
-  variant: "left-accent"
+  variant: "left-accent",
+  position: "bottom-left"
 }
 
 export const success = (props: Props) => toast({
