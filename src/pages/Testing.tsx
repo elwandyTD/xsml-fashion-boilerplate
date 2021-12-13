@@ -9,6 +9,8 @@ import { decCounter, exampleCreateApi, incCounter } from "../redux/example/actio
 import Button from "../components/atoms/Button";
 import Text from "../components/atoms/Text";
 
+import * as toast from "../utils/toast";
+
 const Testing = () => {
   const dispatch: Dispatch<any> = useDispatch();
   const example = useSelector(({ example }: IAppState) => example);
@@ -33,6 +35,12 @@ const Testing = () => {
         <Button onClick={increment}>Increment</Button>
         <Text>{counter.toString()}</Text>
         <Button onClick={decrement}>Decrement</Button>
+        <Button onClick={() => {
+          toast.success({
+            title: 'Account created.',
+            description: "We've created your account for you.",
+          });
+        }}>Toasting</Button>
       </HStack>
       {loading && <Text>Loading</Text>} 
     </Box>
