@@ -2,7 +2,6 @@ import React from "react";
 import { Box, InputGroup, InputLeftElement, Input, Container, HStack, Image, IconButton } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/icon";
 import { FaSearch, FaBars } from "react-icons/fa";
-// import styled from "@emotion/styled";
 
 import Logo from "../assets/images/logo.jpg";
 import Text from "./atoms/Text";

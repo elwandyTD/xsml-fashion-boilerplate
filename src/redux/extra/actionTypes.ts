@@ -1,0 +1,8 @@
+enum actionTypes {
+  OPEN_ALERT = "EXTRA/OPEN_ALERT",
+  CLOSE_ALERT = "EXTRA/CLOSE_ALERT",
+  SET_DATA_ALERT = "EXTRA/SET_DATA_ALERT",
+  RESET_DATA_ALERT = "EXTRA/RESET_DATA_ALERT"
+}
+
+export default actionTypes;
