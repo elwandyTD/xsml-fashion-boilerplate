@@ -5,13 +5,13 @@ export interface IAlert {
   buttonType: "Add" | "Delete"
 }
 
-export interface ExtraState {
+export type ExtraState = {
   openAlert: boolean;
   loading: boolean;
   alert: IAlert
 }
 
-export interface ExtraPayload {
+export type ExtraPayload = {
   openAlert?: boolean;
   loading?: boolean;
   alert?: IAlert

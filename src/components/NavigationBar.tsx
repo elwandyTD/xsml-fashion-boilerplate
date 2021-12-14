@@ -41,7 +41,7 @@ const NavigationBar = React.memo(() => {
         </Box>
         {/* Logo */}
         <Box flex={{ base: 2, sm: 1 }} py={2}>
-          <Image h={{ base: "45px", sm: "50px" }} mx={{ base: "0", sm: "auto" }} src={Logo} />
+          <Image cursor={"pointer"} h={{ base: "45px", sm: "50px" }} mx={{ base: "0", sm: "auto" }} src={Logo} />
         </Box>
         {/* Menu */}
         <HStack flex={1}>
@@ -60,6 +60,6 @@ const NavigationBar = React.memo(() => {
       </HStack>
     </Container>
   );
-})
+});
 
 export default NavigationBar;

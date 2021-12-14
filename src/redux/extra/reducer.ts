@@ -2,10 +2,10 @@ import actionTypes from "./actionTypes";
 import { ExtraState, ExtraAction, IAlert } from "./model";
 
 const defaultDataAlert: IAlert = {
+  buttonType: "Add",
   description: "",
-  onClick: (): void => {},
   title: "",
-  buttonType: "Add"
+  onClick: (): void => {},
 };
 
 const initialState: ExtraState = {
@@ -15,12 +15,6 @@ const initialState: ExtraState = {
 }
 
 const extraReducer = (state: ExtraState = initialState, action: ExtraAction): ExtraState => {
-  const resetDataAlert = {
-    title: "",
-    description: "",
-    onClick: () => {}
-  }
-
   switch (action.type) {
     case actionTypes.OPEN_ALERT: 
       return {
@@ -36,10 +30,10 @@ const extraReducer = (state: ExtraState = initialState, action: ExtraAction): Ex
 
     case actionTypes.SET_DATA_ALERT:
       const newDataAlert: IAlert = {
-        title: action.payload?.alert?.title,
+        buttonType: action.payload?.alert?.buttonType || "Add",
         description: action.payload?.alert?.description,
+        title: action.payload?.alert?.title,
         onClick: action.payload?.alert?.onClick || (() => {}),
-        buttonType: action.payload?.alert?.buttonType || "Add"
       };
 
       return {

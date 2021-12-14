@@ -32,8 +32,6 @@ const Button = memo(forwardRef(({tooltip, ...props}: Props, ref?: React.LegacyRe
     return undefined;
   }, [ref]);
 
-  console.log("testing button");
-
   return (
     <Tooltip {...extra}>
       <BaseButton 
