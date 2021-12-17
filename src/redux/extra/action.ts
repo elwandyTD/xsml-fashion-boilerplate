@@ -1,5 +1,5 @@
 import actionTypes from "./actionTypes";
-import { IAlert, ExtraAction } from "./model";
+import { IAlert, ExtraAction } from "./types";
 
 export const openAlert = (): ExtraAction => ({
   type: actionTypes.OPEN_ALERT
@@ -18,4 +18,11 @@ export const setDataAlert = (alert: IAlert): ExtraAction => ({
 
 export const resetDataAlert = (): ExtraAction => ({
   type: actionTypes.RESET_DATA_ALERT
+});
+
+export const setProgress = (progress: number): ExtraAction => ({
+  type: actionTypes.SET_PROGRESS_BAR,
+  payload: {
+    progress
+  }
 });

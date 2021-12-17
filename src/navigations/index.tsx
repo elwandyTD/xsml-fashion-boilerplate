@@ -16,15 +16,15 @@ const loadingComponent = <p>Loading...</p>;
 
 export const MainNavigation = (): React.ReactElement => {
   return (
-      <Suspense fallback={loadingComponent}>
-    <Routes>
-        <Route path="/" element={<MainTemplate />}>
-          <Route path="/" element={<Testing />} />
-          <Route path="testing2" element={<Testing2 />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-    </Routes>
-      </Suspense>
+    <Suspense fallback={loadingComponent}>
+      <Routes>
+          <Route path="/" element={<MainTemplate />}>
+            <Route path="/" element={<Testing />} />
+            <Route path="testing2" element={<Testing2 />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   )
 }
 

@@ -1,7 +1,9 @@
 import actionTypes from "./actionTypes";
-import { ExampleAction, ExampleDispatchType, IExample, ExampleState } from "./model";
+import { ExampleAction, ExampleDispatchType, IExample, ExampleState } from "./types";
 
 import * as toast from "../../utils/toast";
+import * as api from "../../utils/api";
+import { setProgress } from "../extra/action";
 
 export const addExample = (article: IExample) => {
   const action: ExampleAction = {
@@ -26,7 +28,7 @@ export const removeExample = (article: IExample) => {
 }
 
 export const exampleCreateApi = (success: boolean = false) => {
-  return async (dispatch: ExampleDispatchType) => {
+  return async (dispatch: any) => {
     dispatch({
       type: actionTypes.SET_LOADING,
       payload: {
@@ -34,12 +36,28 @@ export const exampleCreateApi = (success: boolean = false) => {
       }
     });
 
+    // const res = await api.withProgress.get("/v1/users"); 
+    // const { data } = res;
+
+    // console.log(data);
+
+    // setProgress(10);
+
+    // return dispatch({
+    //   type: actionTypes.SET_LOADING,
+    //   payload: {
+    //     loading: false
+    //   }
+    // });
+
     setTimeout(() => {
       if (success) {
         toast.success({
           title: 'Account created.',
           description: "We've created your account for you.",
         });
+
+        dispatch(setProgress(10));
       } else {
         toast.error({
           description: "We've created your account for you.",

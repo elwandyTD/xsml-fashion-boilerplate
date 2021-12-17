@@ -72,7 +72,7 @@ const Testing = () => {
         <Button onClick={openAlert}>Alert</Button>
         <Button onClick={openAlert2}>Alert</Button>
       </HStack>
-      {loading && <Text>Loading</Text>} 
+      {loading && <Text>Loading</Text>}
     </Box>
   );
 }

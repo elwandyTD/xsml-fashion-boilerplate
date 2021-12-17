@@ -1,5 +1,5 @@
 import actionTypes from "./actionTypes";
-import { ExampleAction, ExampleState, IExample } from "./model";
+import { ExampleAction, ExampleState, IExample } from "./types";
 
 const initialState: ExampleState = {
   articles: [],

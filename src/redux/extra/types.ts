@@ -8,13 +8,15 @@ export interface IAlert {
 export type ExtraState = {
   openAlert: boolean;
   loading: boolean;
-  alert: IAlert
+  alert: IAlert;
+  progress: number;
 }
 
 export type ExtraPayload = {
   openAlert?: boolean;
   loading?: boolean;
-  alert?: IAlert
+  alert?: IAlert;
+  progress?: number;
 }
 
 export interface ExtraAction {

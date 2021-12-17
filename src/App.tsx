@@ -15,4 +15,4 @@ export const App = () => (
       </Router>
     </Provider>
   </ChakraProvider>
-)
+);
